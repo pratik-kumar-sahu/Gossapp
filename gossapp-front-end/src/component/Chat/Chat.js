@@ -2,6 +2,8 @@ import { Avatar, IconButton } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { SearchOutlined, AttachFile } from "@material-ui/icons";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import MicIcon from "@material-ui/icons/Mic";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "./Chat.scss";
 
 function Chat() {
@@ -10,6 +12,8 @@ function Chat() {
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
+
+  const sendMessage = () => {};
 
   return (
     <div className="chat">
@@ -38,7 +42,16 @@ function Chat() {
           <span className="chat__timestamp">3:00 AM</span>
         </div>
       </div>
-      <div className="chat__footer"></div>
+      <div className="chat__footer">
+        <InsertEmoticonIcon />
+        <form>
+          <input type="text" placeholder="Type a message" />
+          <button type="submit" onClick={sendMessage}>
+            Send a message
+          </button>
+        </form>
+        <MicIcon />
+      </div>
     </div>
   );
 }

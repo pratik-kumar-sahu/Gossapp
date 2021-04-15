@@ -66,4 +66,38 @@
     margin-left: auto;
     background-color: #dcf8c6;
   }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.2rem;
+    border-top: 1px solid lightgray;
+
+    & > form {
+      flex: 1;
+      display: flex;
+
+      & > input {
+        flex: 1;
+        border-radius: 3rem;
+        padding: 1rem;
+        border: none;
+
+        &:focus {
+          outline-style: none;
+        }
+      }
+
+      & > button {
+        display: none;
+      }
+    }
+
+    & > .MuiSvgIcon-root {
+      padding: 1rem;
+      font-size: 20px;
+      color: gray;
+    }
+  }
 }
