@@ -1,9 +1,12 @@
-import './App.css';
+import "./App.css";
+import Sidebar from "./component/Sidebar/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World! This is Gossapp here...in its initial phase</h1>
+    <div className="app">
+      {/* <p>hey there</p> */}
+      <Sidebar />
+      {/* Chat */}
     </div>
   );
 }
