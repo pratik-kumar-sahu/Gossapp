@@ -7,14 +7,12 @@ function App() {
   return (
     <div className="app">
       <Router>
+        <Sidebar />
         <Switch>
-          <Route path="/app">
-            <Sidebar />
+          <Route path="/rooms/:roomId">
             <Chat />
           </Route>
-          <Route path="/">
-            <h1>Home Screen</h1>
-          </Route>
+          <Route path="/">{/* <Chat /> */}</Route>
         </Switch>
       </Router>
     </div>
